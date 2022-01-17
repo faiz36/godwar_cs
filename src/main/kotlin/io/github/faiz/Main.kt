@@ -34,21 +34,24 @@ class Main:JavaPlugin(),Listener {
                 }else if (r == 2){
                     p.inventory.addItem(ItemStack(Material.IRON_INGOT,3))
                     p.sendMessage("§l§b1%의 확률로 철 3개가 나왔습니다!")
-                }else if (r in 3..6){
+                }else if (r in 3..5){
                     p.inventory.addItem(ItemStack(Material.IRON_INGOT,1))
                     p.sendMessage("§l§b3%의 확률로 철 1개가 나왔습니다!")
-                }else if (r in 7 .. 11){
+                }else if (r in 6 .. 10){
                     p.inventory.addItem(ItemStack(Material.BONE,3))
                     p.sendMessage("§l§b4%의 확률로 뼈 3개가 나왔습니다!")
-                }else if (r in 12 .. 17){
+                }else if (r in 11 .. 16){
                     val x = p.location.x
                     val y = p.location.y
                     val z = p.location.z
                     var tnt:TNTPrimed = p.world.spawnEntity(Location(x,y,z), EntityType.PRIMED_TNT)
-                    p.sendMessage("§l§b1%의 확률로 철 3개가 나왔습니다!")
+                    p.sendMessage("§l§b5%의 확률로 TNT가 나왔습니다!")
+                }else if (r in 17 .. 26){
+                    p.inventory.addItem(ItemStack(Material.COBBLESTONE),10)
+                    p.sendMessage("§l§b10%의 확률로 조약돌 10개가 나왔습니다!")
+                }else{
+                    p.sendMessage("§l§b75%의 확률로 꽝이 나왔습니다!")
                 }
-
-
             }
         }
     }

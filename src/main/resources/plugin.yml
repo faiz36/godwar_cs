@@ -1,5 +1,4 @@
 name: godwar_cs
 version: 0.0.1
 main: io.github.faiz.Main
-depend:
-  - Kotlin
+depend: [Kotlin]
